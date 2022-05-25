@@ -50,5 +50,14 @@
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/datasketch/fnd-ui.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/datasketch/fnd-ui/issues"
+  },
+  "homepage": "https://github.com/datasketch/fnd-ui#readme"
 }
