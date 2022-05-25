@@ -3,24 +3,31 @@ import resolve from '@rollup/plugin-node-resolve'
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
 import commonjs from '@rollup/plugin-commonjs'
 import postcss from 'rollup-plugin-postcss'
+import typescript from '@rollup/plugin-typescript'
+import dts from 'rollup-plugin-dts'
 import { terser } from 'rollup-plugin-terser'
 import packageJSON from './package.json'
 
 export default [
   {
-    input: './src/index.js',
+    input: './src/index.ts',
     output: [
       {
         file: packageJSON.main,
-        format: 'cjs'
+        format: 'cjs',
+        sourcemap: true
       },
       {
         file: packageJSON.module,
         format: 'es',
-        exports: 'named'
+        exports: 'named',
+        sourcemap: true
       }
     ],
     plugins: [
+      typescript({
+        tsconfig: './tsconfig.json'
+      }),
       peerDepsExternal(),
       postcss(),
       resolve(),
@@ -32,5 +39,16 @@ export default [
       }),
       terser()
     ]
+  },
+  {
+    input: 'dist/types/index.d.ts',
+    output: [
+      {
+        file: 'dist/index.d.ts',
+        format: 'es'
+      }
+    ],
+    plugins: [dts()],
+    external: [/\.css$/]
   }
 ]
