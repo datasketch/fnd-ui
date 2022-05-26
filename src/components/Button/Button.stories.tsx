@@ -1,5 +1,5 @@
 /* eslint-disable react/function-component-definition */
-import Button from '../components/Button'
+import Button from '.'
 
 export default {
   title: 'Button',

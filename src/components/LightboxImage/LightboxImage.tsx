@@ -1,5 +1,6 @@
 import React from 'react'
 import { LightboxImageProps } from './LightboxImage.types'
+import './LightboxImage.scss'
 
 const LightboxImage: React.FC<LightboxImageProps> = ({ src, alt }) => {
   return (<div className='fnd-ui-lightbox-container'>

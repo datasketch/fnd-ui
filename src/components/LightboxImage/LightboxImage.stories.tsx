@@ -1,5 +1,5 @@
 /* eslint-disable react/function-component-definition */
-import LightboxImage from '../components/LightboxImage'
+import LightboxImage from '.'
 
 export default {
   title: 'LightboxImage',
