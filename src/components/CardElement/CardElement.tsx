@@ -15,7 +15,7 @@ const CardElement: React.FC<CardElementProps> = ({ title, titleAlign, childrenAl
           textAlign: titleAlign
         }}>{title}</h2>
 
-      <div className="fnd-ui-CardElement-container-children" style={{ textAlign: childrenAlign }} >
+      <div style={{ textAlign: childrenAlign }} >
        {children}
       </div>
 
