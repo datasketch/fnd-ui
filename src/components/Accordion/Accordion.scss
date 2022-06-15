@@ -1,0 +1,67 @@
+.fnd-ui-accordion {
+    &-container {
+        max-width: 1022.35px;
+        width: 100%;
+        padding: 30px 0;
+        border-bottom: 2px solid rgba(45, 57, 78, 0.08);
+    }
+
+    &-button {
+        width: 100%;
+        display: flex; 
+        align-items: center;
+        border: transparent;
+        background: transparent;
+        cursor: pointer;
+        column-gap: 33.7px;
+        padding: 0;
+    }
+
+    &-button p,
+    &-button h3,
+    &-panel p {
+        margin: 0;
+    }
+
+    &-button p {
+        margin-top: -10px;
+        font-size: 40px;
+        transition: all 0.3s;
+
+        &.active {
+            color: #007AA3;
+            transform: rotate(-180deg) translateY(-10px);
+        }
+    }
+
+    &-button h3 {
+        font-size: 35px;
+        font-weight: bold;
+        color: #2D394E;
+
+        &.active {
+            color: #007AA3;
+        }
+    }
+
+    &-panel {
+        margin-top: 0;
+        max-height: 0;
+        overflow: hidden;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s;
+
+        &.active {
+            margin-top: 22.78px;
+            max-height: 100px;
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    &-panel p {
+        font-size: 21px;
+        margin-left: 60px;
+    }
+}
