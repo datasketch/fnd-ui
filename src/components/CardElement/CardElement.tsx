@@ -25,7 +25,7 @@ const CardElement: React.FC<CardElementProps> = ({ title, titleAlign, childrenAl
           <a className='fnd-ui-CardElement-anchorLabel' href={href} > {anchorLabel} </a>
         </div>
         )}
-      </div>
+    </div>
   )
 }
 
