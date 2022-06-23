@@ -4,20 +4,27 @@ import addressed from '../../../public/images/addressed-to-icon.svg'
 import alliance from '../../../public/images/alliance-icon.svg'
 import calendar from '../../../public/images/calendar-icon.svg'
 import location from '../../../public/images/location-icon.svg'
-import './CardEvent.scss'
+import '../../sass/main.scss'
 
 const CardEvent: React.FC<CardEventProps> = ({ title, cardTitle, titleImage, image, linkEvento, href, alt, description, children, fecha, lugar, alianza, dirigido }) => {
+  // const styleH2 = () => {
+  //   if (!image) return { fontSize: 25 + 'px' }
+  // }
+
   return (
     <div className='fnd-ui-cardevent-container'>
-      <div className='fnd-ui-Cardevent-title-info'>{cardTitle}</div>
+      {cardTitle && <div className='fnd-ui-Cardevent-title-info'>{cardTitle}</div>}
 
-      <div className='fnd-ui-Cardevent-image-parent'>
+     {image && (<div className='fnd-ui-Cardevent-image-parent'>
         <div className='fnd-ui-Cardevent-title-image'>{titleImage}</div>
         <img className='fnd-ui-Cardevent-image-container' src={image} alt={alt} />
-      </div>
+      </div>)}
 
       <div className='fnd-ui-Cardevent-info-container'>
-        <h2>{title}</h2>
+        {!image && <div style={{ padding: '15px' }}></div>}
+        {image && <h2>{title}</h2>}
+        {!image && <h2 className='fnd-ui-Cardeven-h2-noimage'>{title}</h2>}
+        {/* <h2 style={styleH2()}>{title}</h2> */}
         <p className='fnd-ui-Cardevent-description'>{description}</p>
         <div className='fnd-ui-Cardevent-infoevent'>
           <div>
