@@ -1,16 +1,16 @@
 .fnd-ui-imagelink {
-    &-container {
+    &__container {
         max-width: 229px;
         width: 100%;
         overflow: hidden;
         position: relative;
     }
 
-    &-panel {
+    &__panel {
         position: relative;
     }
-    
-    &-image {
+
+    &__image {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -21,11 +21,11 @@
         aspect-ratio: 3 / 2;
     }
 
-    &-image:hover {
-        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    &__image:hover {
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
     }
 
-    &-link {
+    &__link {
         position: absolute;
         top: 8px;
         right: -100%;
@@ -37,13 +37,44 @@
         transition: all 0.3s;
     }
 
-    &-container:hover &-link {
+    &__container:hover &__link {
         right: 8px;
     }
-    
-    &-label {
+
+    &__label {
         font-size: 22px;
         margin: 4px 0 0 0;
         text-align: center;
+        color: yellow;
+    }
+
+    @include respond(sm) {
+        &__label {
+            color: blue;
+        }
+    }
+
+    @include respond(md) {
+        &__label {
+            color: red;
+        }
+    }
+
+    @include respond(lg) {
+        &__label {
+            color: green;
+        }
+    }
+
+    @include respond(xl) {
+        &__label {
+            color: orange;
+        }
+    }
+
+    @include respond(2xl) {
+        &__label {
+            color: pink;
+        }
     }
 }
