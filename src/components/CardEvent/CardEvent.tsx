@@ -23,8 +23,6 @@ const CardEvent: React.FC<CardEventProps> = ({ title, cardTitle, titleImage, ima
       <div className='fnd-ui-Cardevent-info-container'>
         {!image && <div style={{ padding: '15px' }}></div>}
         {image && <h2>{title}</h2>}
-        {!image && <h2 className='fnd-ui-Cardeven-h2-noimage'>{title}</h2>}
-        {/* <h2 style={styleH2()}>{title}</h2> */}
         <p className='fnd-ui-Cardevent-description'>{description}</p>
         <div className='fnd-ui-Cardevent-infoevent'>
           <div>
