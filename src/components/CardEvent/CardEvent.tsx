@@ -7,10 +7,6 @@ import location from '../../../public/images/location-icon.svg'
 import '../../sass/main.scss'
 
 const CardEvent: React.FC<CardEventProps> = ({ title, cardTitle, titleImage, image, linkEvento, href, alt, description, children, fecha, lugar, alianza, dirigido }) => {
-  // const styleH2 = () => {
-  //   if (!image) return { fontSize: 25 + 'px' }
-  // }
-
   return (
     <div className='fnd-ui-cardevent-container'>
       {cardTitle && <div className='fnd-ui-Cardevent-title-info'>{cardTitle}</div>}
