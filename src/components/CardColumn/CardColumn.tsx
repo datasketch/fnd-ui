@@ -1,6 +1,6 @@
 import React from 'react'
 import { CardColumnProps } from './CardColumn.types'
-import '../../sass/main.scss'
+
 const CardElement: React.FC<CardColumnProps> = ({ image, title, subtitle, description, href, alt }) => {
   return (
     <div className='fnd-ui-Cardcolum-container'>

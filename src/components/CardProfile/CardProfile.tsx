@@ -1,6 +1,6 @@
 import React from 'react'
 import { CardProfileProps } from './CardProfile.types'
-import '../../sass/main.scss'
+
 const CardElement: React.FC<CardProfileProps> = ({ name, image, position, mail, alt }) => {
   return (
     <div className='fnd-ui-Cardprofile-container'>
