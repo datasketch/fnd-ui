@@ -1,5 +1,5 @@
 import React from 'react'
-export interface CardElementProps {
+export interface CardColumnProps {
     title: string,
     titleAlign?: 'left' | 'center' | 'right',
     image?: string,
