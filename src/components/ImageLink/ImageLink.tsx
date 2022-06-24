@@ -1,6 +1,6 @@
 import React from 'react'
 import { ImageLinkProps } from './ImageLink.types'
-import '../../sass/main.scss'
+import imageLink from '../../img/image-link-arrow.svg'
 
 const ImageLink: React.FC<ImageLinkProps> = ({ src, href, target = '_self', label }) => {
   return (
@@ -8,7 +8,7 @@ const ImageLink: React.FC<ImageLinkProps> = ({ src, href, target = '_self', labe
     <div className='fnd-ui-imagelink__panel'>
         <img className='fnd-ui-imagelink__image' src={src} alt={`${label} image`} />
         <a className='fnd-ui-imagelink__link' href={href} target={target}>
-            &#10230;
+            <img src={imageLink} alt="image arrow link icon" />
         </a>
     </div>
     <p className='fnd-ui-imagelink__label'>

@@ -32,9 +32,13 @@
         color: white;
         text-decoration: none;
         font-size: 20px;
-        transform: rotate(-45deg);
         font-weight: bold;
         transition: all 0.3s;
+    }
+
+    &__link img {
+        width: 34.08px;
+        height: 34.64px;
     }
 
     &__container:hover &__link {
@@ -45,36 +49,5 @@
         font-size: 22px;
         margin: 4px 0 0 0;
         text-align: center;
-        color: yellow;
-    }
-
-    @include respond(sm) {
-        &__label {
-            color: blue;
-        }
-    }
-
-    @include respond(md) {
-        &__label {
-            color: red;
-        }
-    }
-
-    @include respond(lg) {
-        &__label {
-            color: green;
-        }
-    }
-
-    @include respond(xl) {
-        &__label {
-            color: orange;
-        }
-    }
-
-    @include respond(2xl) {
-        &__label {
-            color: pink;
-        }
     }
 }
