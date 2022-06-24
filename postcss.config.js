@@ -1,6 +1,6 @@
 module.exports = {
   plugins: [
-    require('autoprefixer')
-  ],
-  minimize: true
+    require('autoprefixer'),
+    require('cssnano')
+  ]
 }

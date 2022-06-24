@@ -1,0 +1,53 @@
+.fnd-ui-imagelink {
+    &__container {
+        max-width: 229px;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    &__panel {
+        position: relative;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: all 0.3s;
+        aspect-ratio: 3 / 2;
+    }
+
+    &__image:hover {
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+    }
+
+    &__link {
+        position: absolute;
+        top: 8px;
+        right: -100%;
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        transition: all 0.3s;
+    }
+
+    &__link img {
+        width: 34.08px;
+        height: 34.64px;
+    }
+
+    &__container:hover &__link {
+        right: 8px;
+    }
+
+    &__label {
+        font-size: 22px;
+        margin: 4px 0 0 0;
+        text-align: center;
+    }
+}
