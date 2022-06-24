@@ -1,12 +1,8 @@
-import React from 'react'
 export interface CardColumnProps {
+    image:string,
     title: string,
-    titleAlign?: 'left' | 'center' | 'right',
-    image?: string,
-    imageBorderRadius?: string,
-    childrenAlign?: 'left' | 'center' | 'right',
-    children?: React.ReactNode,
-    anchorLabel?: string,
+    subtitle:string,
+    description: string
     href?: string,
-    alt?: string,
+    alt?:string
 }
