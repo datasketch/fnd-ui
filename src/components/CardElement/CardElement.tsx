@@ -1,7 +1,6 @@
 import React from 'react'
 import { CardElementProps } from './CardElement.types'
-import './CardElement.scss'
-
+import '../../sass/main.scss'
 const CardElement: React.FC<CardElementProps> = ({ title, titleAlign, childrenAlign, image, imageBorderRadius, anchorLabel, children, href, alt }) => {
   return (
     <div className='fnd-ui-CardElement-container'>

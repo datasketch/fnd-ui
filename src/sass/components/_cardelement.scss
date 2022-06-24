@@ -39,3 +39,14 @@
     border-bottom: 2px solid #007AA3;
     padding-bottom: 5px;
 }
+
+
+@include respond(sm) {}
+
+@include respond(md) {}
+
+@include respond(lg) {}
+
+@include respond(xl) {}
+
+@include respond(2xl) {}
