@@ -7,6 +7,7 @@ import typescript from '@rollup/plugin-typescript'
 import dts from 'rollup-plugin-dts'
 import { terser } from 'rollup-plugin-terser'
 import packageJSON from './package.json'
+import images from 'rollup-plugin-image-files'
 
 export default [
   {
@@ -29,7 +30,10 @@ export default [
         tsconfig: './tsconfig.json'
       }),
       peerDepsExternal(),
-      postcss(),
+      images(),
+      postcss({
+        extract: 'css/style.min.css'
+      }),
       resolve(),
       commonjs(),
       babel({
