@@ -1,11 +1,10 @@
 import React from 'react'
 import { INewsBannerProps } from './NewsBanner.types'
-import './NewsBanner.scss'
 
 const NewsBanner: React.FC<INewsBannerProps> = ({ title, description, href, target = '_self', src }) => {
   return (
-        <div className='fnd-ui-newsbanner-container'>
-            <div className='fnd-ui-newsbanner-left'>
+        <div className='fnd-ui-newsbanner__container'>
+            <div className='fnd-ui-newsbanner__left'>
                 <p>
                     Novedades
                 </p>
@@ -19,7 +18,7 @@ const NewsBanner: React.FC<INewsBannerProps> = ({ title, description, href, targ
                     Ir a la noticia
                 </a>
             </div>
-            <div className='fnd-ui-newsbanner-right'>
+            <div className='fnd-ui-newsbanner__right'>
                 <img src={src} alt='Noticia' />
             </div>
         </div>
