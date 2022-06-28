@@ -1,6 +1,5 @@
 import React from 'react'
 import { NewsProps } from './News.types'
-import './News.scss'
 
 const News: React.FC<NewsProps> = ({ date, src, title, description, href, target = '_self' }) => {
   return (
