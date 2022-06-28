@@ -1,20 +1,18 @@
 import React, { useState } from 'react'
 import { AccordionProps } from './Accordion.types'
-import './Accordion.scss'
+const imageSrc = require('../../img/accordion-arrow-down.svg')
 
 const Accordion: React.FC<AccordionProps> = ({ title, description, isActive = false }) => {
   const [isOpen, setIsOpen] = useState(isActive)
   return (
-        <div className='fnd-ui-accordion-container'>
-            <button onClick={() => setIsOpen(!isOpen)} className='fnd-ui-accordion-button'>
-                <p className={isOpen ? 'active' : ''}>
-                    &#8595;
-                </p>
+        <div className='fnd-ui-accordion__container'>
+            <button onClick={() => setIsOpen(!isOpen)} className='fnd-ui-accordion__button'>
+                <img src={imageSrc} alt="" className={isOpen ? 'active' : ''} />
                 <h3 className={isOpen ? 'active' : ''}>
                     {title}
                 </h3>
             </button>
-            <div className={`fnd-ui-accordion-panel ${isOpen ? 'active' : ''}`}>
+            <div className={`fnd-ui-accordion__panel ${isOpen ? 'active' : ''}`}>
                 <p>
                     {description}
                 </p>
