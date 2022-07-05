@@ -1,0 +1,162 @@
+.fnd-ui-accordion {
+    &__container {
+        max-width: 1022.35px;
+        padding: 10px 0;
+        border-bottom: 2px solid rgba(45, 57, 78, 0.08);
+        box-sizing: border-box;
+    }
+
+    @include respond(sm) {
+        &__container {
+            padding: 15px 0;
+        }
+    }
+
+    @include respond(md) {
+        &__container {
+            padding: 20px 0;
+        }
+    }
+
+    @include respond(lg) {
+        &__container {
+            padding: 25px 0;
+        }
+    }
+
+    @include respond(2xl) {
+        &__container {
+            padding: 30px 0;
+        }
+    }
+
+    &__button {
+        width: 100%;
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+        border: transparent;
+        background: transparent;
+        cursor: pointer;
+        row-gap: 20px;
+        padding: 0;
+    }
+
+    &__button img {
+        order: 2;
+    }
+
+    @include respond(md) {
+        &__button img {
+            order: 1;
+        }
+    }
+
+    &__button h3 {
+        order: 1;
+    }
+
+    @include respond(md) {
+        &__button h3 {
+            order: 2;
+        }
+    }
+
+    @include respond(md) {
+        &__button {
+            flex-direction: row;
+            column-gap: 15px;
+        }
+    }
+
+    @include respond(lg) {
+        &__button {
+            flex-direction: row;
+            column-gap: 20px;
+        }
+    }
+
+    @include respond(lg) {
+        &__button {
+            flex-direction: row;
+            column-gap: 25px;
+        }
+    }
+
+    @include respond(xl) {
+        &__button {
+            flex-direction: row;
+            column-gap: 25px;
+        }
+    }
+
+    @include respond(2xl) {
+        &__button {
+            flex-direction: row;
+            column-gap: 33.7px;
+        }
+    }
+
+    &__button p,
+    &__button h3,
+    &__panel p {
+        margin: 0;
+    }
+
+    &__button img {
+        transition: all 0.3s;
+
+        &.active {
+            color: #007AA3;
+            transform: rotate(-180deg);
+        }
+    }
+
+    &__button h3 {
+        font-size: 35px;
+        font-weight: bold;
+        color: #2D394E;
+
+        &.active {
+            color: #007AA3;
+        }
+    }
+
+    &__panel {
+        margin-top: 0;
+        max-height: 0;
+        overflow: hidden;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s;
+
+        &.active {
+            margin-top: 22.78px;
+            max-height: 100px;
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    &__panel p {
+        font-size: 21px;
+        text-align: center;
+        max-width: 563px;
+        margin: 0 auto;
+    }
+
+    @include respond(md) {
+        &__panel p {
+            max-width: 100%;
+            margin: 0;
+            text-align: left;
+            margin-left: 10px;
+        }
+    }
+
+    @include respond(2xl) {
+        &__panel p {
+            margin-left: 60px;
+        }
+    }
+}
