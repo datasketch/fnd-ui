@@ -1,7 +1,7 @@
 import React from 'react'
 import { CardColumnProps } from './CardColumn.types'
 
-const CardElement: React.FC<CardColumnProps> = ({ image, title, subtitle, description, href, alt }) => {
+const CardElement: React.FC<CardColumnProps> = ({ image, title, subtitle, description, href, alt, target = '_self' }) => {
   return (
     <div className='fnd-ui-Cardcolum-container'>
       <img className='fnd-ui-Cardcolum-image' src={image} alt={alt} />
@@ -11,7 +11,7 @@ const CardElement: React.FC<CardColumnProps> = ({ image, title, subtitle, descri
         <p>{description}</p>
       </div>
       <div className='fnd-ui-Cardcolumn-button'>
-        <a href={href}>Leer columna</a>
+        <a href={href} target={target}>Leer columna</a>
       </div>
     </div>
   )
