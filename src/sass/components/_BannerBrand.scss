@@ -1,0 +1,121 @@
+.fnd-ui-bannerbrand {
+    &__container {
+        border-radius: 20px;
+        overflow: hidden;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        padding: 30px;
+        max-width: 1192px;
+    }
+
+    @include respond(md) {
+        &__container {
+            padding: 40px;
+        }
+    }  
+
+    @include respond(lg) {
+        &__container {
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 40px 50px;
+        }
+    }
+
+    @include respond(xl) {
+        &__container {
+            padding: 53px 20px 51px 100.5px;
+        }
+    }
+
+    &__left {
+        max-width: 791px;
+        width: 100%;
+    }
+
+    &__right {
+        max-width: 269px;
+        width: 100%;
+        align-self: flex-start;
+        display: none;
+    }
+
+    @include respond(lg) {
+        &__right {
+            align-self: flex-end;
+            display: block;
+        }
+    }
+
+    &__lead,
+    &__title,
+    &__link,
+    children p {
+        margin: 0;
+    }
+
+    &__lead,
+    &__title,
+    &__link {
+        font-weight: bold;
+    }
+
+    &__children {
+        max-width: 512px;
+        width: 100%;
+        font-size: 19px;
+        margin-top: 21.5px;
+    }
+
+    &__lead {
+        font-size: 22px;
+    }
+
+    &__title {
+        font-size: 40px;
+        line-height: 1;
+        margin-top: 10.5px;
+    }
+
+    &__link {
+        display: inline-block;
+        text-decoration: none;
+        color: white;
+        font-size: 22px;
+        padding-bottom: 5.25px;
+        padding-right: 30px;
+        border-bottom: 2px solid #33ACD1;
+        margin-top: 21.5px;
+    }
+
+    &__watermark {
+        width: 100%;
+        height: 115px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: -35px;
+    }
+
+    @include respond(lg) {
+        &__watermark {
+            margin-bottom: -15px;
+        }
+    }
+
+    @include respond(xl) {
+        &__watermark {
+            margin-bottom: -25px;
+        }
+    }
+
+    @include respond(2xl) {
+        &__watermark {
+            margin-bottom: -35px;
+        }
+    }
+}
