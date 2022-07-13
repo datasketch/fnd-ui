@@ -1,17 +1,18 @@
 import React from 'react'
 import { CardEventProps } from './CardEvent.types'
-import addressed from '../../../public/images/addressed-to-icon.svg'
-import alliance from '../../../public/images/alliance-icon.svg'
-import calendar from '../../../public/images/calendar-icon.svg'
-import location from '../../../public/images/location-icon.svg'
-import '../../sass/main.scss'
 
-const CardEvent: React.FC<CardEventProps> = ({ title, cardTitle, titleImage, image, linkEvento, href, alt, description, children, fecha, lugar, alianza, dirigido }) => {
+import '../../sass/main.scss'
+const addressed = require('../../../public/images/addressed-to-icon.svg')
+const allianceImg = require('../../../public/images/alliance-icon.svg')
+const calendar = require('../../../public/images/calendar-icon.svg')
+const locationImg = require('../../../public/images/location-icon.svg')
+
+const CardEvent: React.FC<CardEventProps> = ({ title, cardTitle, titleImage, image, linkEvent, href, alt, target = '_blank', description, children, date, location, alliance, audience, onClick }) => {
   return (
     <div className='fnd-ui-cardevent-container'>
       {cardTitle && <div className='fnd-ui-Cardevent-title-info'>{cardTitle}</div>}
 
-     {image && (<div className='fnd-ui-Cardevent-image-parent'>
+      {image && (<div className='fnd-ui-Cardevent-image-parent'>
         <div className='fnd-ui-Cardevent-title-image'>{titleImage}</div>
         <img className='fnd-ui-Cardevent-image-container' src={image} alt={alt} />
       </div>)}
@@ -25,26 +26,26 @@ const CardEvent: React.FC<CardEventProps> = ({ title, cardTitle, titleImage, ima
             <img src={calendar} alt='calendar' />
             <span>Fecha:</span>
             {' '}
-            <p>{fecha}</p>
+            <p>{date}</p>
           </div>
           <div>
-            <img src={location} alt='location' />
+            <img src={locationImg} alt='location' />
             <span>Lugar: </span>
-            <p>{lugar}
+            <p>{location}
             </p>
             (
-            {linkEvento && <a href={linkEvento} target='_blank' rel='noopener noreferrer'>Enlace aquí</a>}
+            {linkEvent && <a href={linkEvent} target={target} rel='noopener noreferrer'>Enlace aquí</a>}
             )
           </div>
           <div>
-            <img src={alliance} alt='alliance' />
+            <img src={allianceImg} alt='alliance' />
             <span>En alianza con: </span>
-            <p>{alianza}</p>
+            <p>{alliance}</p>
           </div>
           <div>
             <img src={addressed} alt='location' />
             <span>Dirigido a: </span>
-            <p>{dirigido} </p>
+            <p>{audience} </p>
           </div>
         </div>
         <div className='fnd-ui-Cardevent-buttons'>
@@ -52,7 +53,7 @@ const CardEvent: React.FC<CardEventProps> = ({ title, cardTitle, titleImage, ima
             <a href={href} target='_blank' rel="noreferrer">Mas información</a>
           </div>
           <div>
-            <button >Agregar al calendario</button>
+            <button onClick={onClick} >Agregar al calendario</button>
           </div>
         </div>
       </div>

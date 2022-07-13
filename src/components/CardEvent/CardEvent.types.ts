@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { MouseEventHandler } from 'react'
 
 export interface CardEventProps {
   title: string,
@@ -9,9 +9,11 @@ export interface CardEventProps {
   children?: React.ReactNode,
   href: string,
   alt?: string,
-  fecha?: string,
-  lugar?: string,
-  linkEvento?: string,
-  alianza?: string,
-  dirigido?: string,
+  date?: string,
+  location?: string,
+  linkEvent?: string,
+  alliance?: string,
+  audience?: string,
+  target?: '_blank' | '_top' | '_parent' | '_self'
+  onClick?: MouseEventHandler<HTMLButtonElement>,
 }
