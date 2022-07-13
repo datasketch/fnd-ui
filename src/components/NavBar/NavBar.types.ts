@@ -1,7 +1,7 @@
 
 export interface NavBarProps {
   image: string,
-  dataNavBar: [
+  data: [
     {
       label: string,
       link: string,

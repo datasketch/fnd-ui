@@ -89,4 +89,4 @@ const data = [
     link: '/atencion-al-ciudadano'
   }
 ]
-export const Primary = () => <NavBar dataNavBar={data} image={image} />
+export const Primary = () => <NavBar data={data} image={image} />

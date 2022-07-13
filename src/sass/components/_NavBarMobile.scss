@@ -1,6 +1,5 @@
 .fnd-ui-Navbar-mobile-container {
     align-items: center;
-    background-color: aqua;
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -8,9 +7,11 @@
 }
 
 .fnd-ui-Navbar-mobile-image {
-    max-width: 227.19px;
-    width: 100%;
+    max-width: 180px;
 
+    img {
+        width: 100%;
+    }
 }
 
 .fnd-ui-Navbar-mobile-menu {
