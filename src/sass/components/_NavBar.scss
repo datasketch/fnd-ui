@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #2D394E;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.fnd-ui-Navbar-desktop-container {
+    display: none;
+}
+
+
+@include respond(lg) {
+    .fnd-ui-Navbar-desktop-container {
+        display: flex;
+        max-height: 124px;
+        column-gap: 5px;
+    }
+
+    .fnd-ui-Navbar-desktop-image {
+        margin: auto 0;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .fnd-ui-Navbar-desktop-paymentbutton {
+        background-color: #E06F28;
+        text-align: center;
+        padding: 10px 12px;
+        margin: 0 5px;
+        font-weight: bold;
+        border-radius: 10px;
+
+        a {
+            color: #fff;
+        }
+    }
+
+    .fnd-ui-Navbar-desktop-menu {
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-auto-flow: column;
+        align-items: center;
+        font-size: 15px;
+
+    }
+
+    .fnd-ui-Navbar-Desktop-submenu-item {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .fnd-ui-Navbar-Desktop-submenu-item:hover {
+        border-radius: 10px;
+        background-color: #E7E9ED;
+    }
+
+    .Dropdown-label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 9px;
+        padding: 10px 15px;
+        cursor: pointer;
+
+    }
+
+    .Dropdown-label--active {
+        padding: 10px 15px;
+    }
+
+    .Dropdown-container {
+        position: relative;
+        width: 100%;
+    }
+
+    .Dropdown-container--active {
+        position: relative;
+        width: 100%;
+    }
+
+    .active {
+        background-color: #E7E9ED;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .Dropdowm-option--active {
+        position: absolute;
+        left: 0;
+        top: 40px;
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+        background-color: #E7E9ED;
+        margin-bottom: 10px;
+    }
+
+    .Dropdowm-option-bar {
+        border-top: 2px solid #2D394E;
+        opacity: 8%;
+        width: 80%;
+        margin: 0 auto;
+        padding: 5px 0;
+    }
+
+    .DropDowm-option-item {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .DropDowm-option-item:hover {
+        background-color: #007AA3;
+
+        a {
+            color: #fff;
+        }
+    }
+
+
+}
+
+
+@include respond(xl) {
+
+    .fnd-ui-Navbar-desktop-menu {
+        font-size: 19px;
+    }
+
+}
+
+@include respond(2xl) {
+    .fnd-ui-Navbar-desktop-menu {
+        font-size: 23px;
+    }
+
+    .fnd-ui-Navbar-desktop-paymentbutton {
+        background-color: #E06F28;
+        text-align: center;
+        padding: 10px 12px;
+        margin: 0 50px;
+        font-weight: bold;
+        border-radius: 10px;
+
+        a {
+            color: #fff;
+        }
+    }
+}
