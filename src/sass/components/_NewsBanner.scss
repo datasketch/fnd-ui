@@ -1,0 +1,124 @@
+.fnd-ui-newsbanner {
+    &__container {
+        max-width: 1402px;
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        row-gap: 30px;
+    }
+
+    @include respond(lg) {
+        &__container {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 32px;
+        }
+    }
+
+    &__left {
+        max-width: 554px;
+        width: 100%;
+        order: 2;
+    }
+
+    @include respond(lg) {
+        &__left {
+            order: 1;
+        }
+    }
+
+    &__right {
+        max-width: 708px;
+        width: 100%;
+        overflow: hidden;
+        order: 1;
+    }
+
+    @include respond(lg) {
+        &__right {
+            order: 2;
+        }
+    }
+
+    &__left p,
+    &__left h2,
+    &__left a {
+        margin: 0;
+        color: #2D394E;
+    }
+
+    &__left p:first-child,
+    &__left h2,
+    &__left a {
+        font-weight: bold;
+    }
+
+    &__left p:first-child,
+    &__left a {
+        font-size: 22px;
+    }
+
+    &__left h2 {
+        line-height: 1;
+        margin: 20px 0;
+        font-size: 28px;
+    }
+
+    @include respond(md) {
+        &__left h2 {
+            font-size: 32px;
+        }
+    }
+
+    @include respond(xl) {
+        &__left h2 {
+            font-size: 36px;
+        }
+    }
+
+    @include respond(2xl) {
+        &__left h2 {
+            font-size: 40px;
+            margin: 28px 0;
+        }
+    }
+
+    &__left p {
+        font-size: 19px;
+    }
+
+    &__left a {
+        display: inline-block;
+        text-decoration: none;
+        color: #007AA3;
+        padding-bottom: 5px;
+        padding-right: 20px;
+        border-bottom: 2px solid #007AA3;
+        margin-top: 20px;
+    }
+
+    @include respond(xl) {
+        &__left a {
+            margin-top: 30px;
+        }
+    }
+
+    @include respond(2xl) {
+        &__left a {
+            margin-top: 41px;
+        }
+    }
+
+    &__right img {
+        overflow: hidden;
+        max-height: 530.78px;
+        height: 100%;
+        border-radius: 30px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
