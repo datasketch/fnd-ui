@@ -1,0 +1,91 @@
+.fnd-ui-Cardprofile-container {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    width: 180px;
+    padding: 25px 36px;
+}
+
+.fnd-ui-Cardprofile-image {
+
+    img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 100%;
+    }
+}
+
+.fnd-ui-Cardprofile-name>h2 {
+    margin: 5px 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+.fnd-ui-Cardprofile-separator {
+    width: 80%;
+    margin: auto 0;
+    border: 1px solid #2d394e;
+    opacity: 8%;
+}
+
+.fnd-ui-Cardprofoile-info {
+
+    font-size: 18px;
+
+    p {
+        margin: 0;
+        font-style: italic;
+    }
+
+    b {
+        margin: 0;
+
+    }
+}
+
+@include respond(sm) {
+    .fnd-ui-Cardprofile-container {
+        width: 266px;
+        height: 395px;
+        gap: 2%;
+        margin: 0;
+    }
+
+    .fnd-ui-Cardprofile-image {
+        margin: auto 0;
+
+    }
+
+    .fnd-ui-Cardprofile-separator {
+        width: 90%;
+    }
+
+    .fnd-ui-Cardprofile-name>h2 {
+        margin: auto 0;
+
+        font-size: 21px;
+    }
+
+    .fnd-ui-Cardprofoile-info {
+        margin: auto 0;
+        font-size: 20px;
+    }
+}
+
+
+
+@include respond(2xl) {
+    .fnd-ui-Cardprofile-name>h2 {
+        font-size: 24px;
+    }
+
+    .fnd-ui-Cardprofoile-info {
+        font-size: 22px;
+    }
+}
