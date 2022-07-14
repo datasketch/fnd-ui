@@ -13,19 +13,21 @@ li {
     list-style: none;
 }
 
-.fnd-ui-Navbar-desktop-container {
+.fnd-ui-navbar-desktop__container {
     display: none;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 
 @include respond(lg) {
-    .fnd-ui-Navbar-desktop-container {
+    .fnd-ui-navbar-desktop__container {
         display: flex;
         max-height: 124px;
         column-gap: 5px;
     }
 
-    .fnd-ui-Navbar-desktop-image {
+    .fnd-ui-navbar-desktop__image {
         margin: auto 0;
 
         img {
@@ -33,7 +35,7 @@ li {
         }
     }
 
-    .fnd-ui-Navbar-desktop-paymentbutton {
+    .fnd-ui-navbar-desktop__paymentbutton {
         background-color: #E06F28;
         text-align: center;
         padding: 10px 12px;
@@ -46,7 +48,7 @@ li {
         }
     }
 
-    .fnd-ui-Navbar-desktop-menu {
+    .fnd-ui-navbar-desktop__menu {
         display: grid;
         grid-auto-columns: 1fr;
         grid-auto-flow: column;
@@ -55,12 +57,12 @@ li {
 
     }
 
-    .fnd-ui-Navbar-Desktop-submenu-item {
+    .fnd-ui-navbar-desktop__submenu-item {
         text-align: center;
         padding: 10px;
     }
 
-    .fnd-ui-Navbar-Desktop-submenu-item:hover {
+    .fnd-ui-navbar-desktop__submenu-item:hover {
         border-radius: 10px;
         background-color: #E7E9ED;
     }
@@ -131,18 +133,18 @@ li {
 
 @include respond(xl) {
 
-    .fnd-ui-Navbar-desktop-menu {
+    .fnd-ui-navbar-desktop__menu {
         font-size: 19px;
     }
 
 }
 
 @include respond(2xl) {
-    .fnd-ui-Navbar-desktop-menu {
+    .fnd-ui-navbar-desktop__menu {
         font-size: 23px;
     }
 
-    .fnd-ui-Navbar-desktop-paymentbutton {
+    .fnd-ui-navbar-desktop__paymentbutton {
         background-color: #E06F28;
         text-align: center;
         padding: 10px 12px;

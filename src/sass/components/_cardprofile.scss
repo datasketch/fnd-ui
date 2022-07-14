@@ -1,16 +1,15 @@
-.fnd-ui-Cardprofile-container {
+.fnd-ui-cardprofile__container {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 20px;
     display: flex;
-    margin: 0 auto;
     flex-direction: column;
     gap: 8px;
     align-items: center;
-    width: 180px;
+    max-width: 265.36px;
     padding: 25px 36px;
 }
 
-.fnd-ui-Cardprofile-image {
+.fnd-ui-cardprofile__image {
 
     img {
         width: 100%;
@@ -21,21 +20,20 @@
     }
 }
 
-.fnd-ui-Cardprofile-name>h2 {
+.fnd-ui-cardprofile__name h2 {
     margin: 5px 0;
     text-align: center;
     font-size: 18px;
 }
 
-.fnd-ui-Cardprofile-separator {
+.fnd-ui-cardprofile__separator {
     width: 80%;
     margin: auto 0;
     border: 1px solid #2d394e;
     opacity: 8%;
 }
 
-.fnd-ui-Cardprofoile-info {
-
+.fnd-ui-cardprofile__info {
     font-size: 18px;
 
     p {
@@ -43,36 +41,37 @@
         font-style: italic;
     }
 
-    b {
+    a {
+        display: inline-block;
         margin: 0;
-
+        font-style: italic;
     }
 }
 
 @include respond(sm) {
-    .fnd-ui-Cardprofile-container {
+    .fnd-ui-cardprofile__container {
         width: 266px;
         height: 395px;
         gap: 2%;
         margin: 0;
     }
 
-    .fnd-ui-Cardprofile-image {
+    .fnd-ui-cardprofile__image {
         margin: auto 0;
 
     }
 
-    .fnd-ui-Cardprofile-separator {
+    .fnd-ui-cardprofile__separator {
         width: 90%;
     }
 
-    .fnd-ui-Cardprofile-name>h2 {
+    .fnd-ui-cardprofile__name>h2 {
         margin: auto 0;
 
         font-size: 21px;
     }
 
-    .fnd-ui-Cardprofoile-info {
+    .fnd-ui-cardprofile__info {
         margin: auto 0;
         font-size: 20px;
     }
@@ -81,11 +80,11 @@
 
 
 @include respond(2xl) {
-    .fnd-ui-Cardprofile-name>h2 {
+    .fnd-ui-cardprofile__name>h2 {
         font-size: 24px;
     }
 
-    .fnd-ui-Cardprofoile-info {
+    .fnd-ui-cardprofile__info {
         font-size: 22px;
     }
 }

@@ -15,31 +15,31 @@ const NavBar: React.FC<NavBarProps> = ({ image, data }) => {
   }
   return (
     <div>
-      <div className='fnd-ui-Navbar-desktop-container'>
+      <div className='fnd-ui-navbar-desktop__container'>
         {/* Desktop */}
-        <div className='fnd-ui-Navbar-desktop-image'>
+        <div className='fnd-ui-navbar-desktop__image'>
           <img src={image} alt='fnd image' />
         </div>
-        <div className='fnd-ui-Navbar-desktop-menu'>
+        <div className='fnd-ui-navbar-desktop__menu'>
           {data.map((item, index) => {
             if (!item.children) {
-              return (<li key={index} className='fnd-ui-Navbar-Desktop-submenu-item'>
-                <a href={item.link} className='fnd-ui-Navbar-Desktop-submenu-item-link'>{item.label}</a>
+              return (<li key={index} className='fnd-ui-navbar-desktop__submenu-item'>
+                <a href={item.link} className='fnd-ui-navbar-desktop__submenu-item-link'>{item.label}</a>
               </li>)
             }
             return <DropDown key={index} label={item.label} link={item.link} children={item.children} />
           }
           )}
-          <div className='fnd-ui-Navbar-desktop-paymentbutton'><a href='#'>Boton de pagos</a></div>
+          <div className='fnd-ui-navbar-desktop__paymentbutton'><a href='#'>Boton de pagos</a></div>
         </div>
       </div>
       <nav>
-        <div className='fnd-ui-Navbar-mobile-container'>
+        <div className='fnd-ui-navbar-mobile__container'>
           {/* Mobile */}
-          <div className='fnd-ui-Navbar-mobile-image'>
+          <div className='fnd-ui-navbar-mobile__image'>
             <img src={image} alt='fnd image' />
           </div>
-          <div className='fnd-ui-Navbar-mobile-menu'>
+          <div className='fnd-ui-navbar-mobile__menu'>
             <div onClick={handleState} >
               <img src={menuOpen ? xmark : bars} style={{
                 width: '35px',
@@ -47,7 +47,7 @@ const NavBar: React.FC<NavBarProps> = ({ image, data }) => {
               }} />
             </div>
           </div>
-          <ul className={`fnd-ui-Navbar-mobile-submenu ${menuOpen && 'fnd-ui-Navbar-mobile-submenu--active'}`} >
+          <ul className={`fnd-ui-navbar-mobile__submenu ${menuOpen && 'fnd-ui-navbar-mobile__submenu--active'}`} >
             {data.map(({ children, label, link }, index) => {
               if (children) {
                 return (
@@ -55,16 +55,15 @@ const NavBar: React.FC<NavBarProps> = ({ image, data }) => {
                 )
               }
               return (
-                <li key={index} className='fnd-ui-Navbar-mobile-submenu-item'>
-                  <a href={link} className='fnd-ui-Navbar-mobile-submenu-item-link'>{label}</a>
+                <li key={index} className='fnd-ui-navbar-mobile__submenu-item'>
+                  <a href={link} className='fnd-ui-navbar-mobile__submenu-item-link'>{label}</a>
                 </li>
               )
             })}
-            <div className='fnd-ui-Navbar-mobile-paymentbutton'><a href='#'>Boton de pagos</a></div>
+            <div className='fnd-ui-navbar-mobile__paymentbutton'><a href='#'>Boton de pagos</a></div>
           </ul>
         </div>
       </nav>
-
     </div>
   )
 }
