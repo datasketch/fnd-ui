@@ -1,0 +1,319 @@
+.fnd-ui-cardevent-container {
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin: 0 auto;
+    border-radius: 20px;
+    width: 92%;
+}
+
+.fnd-ui-Cardevent-image-container {
+    border-radius: 20px 20px 0 0;
+    height: 150px;
+    width: 100%;
+    margin: 0;
+}
+
+.fnd-ui-Cardevent-title-image {
+    background-color: #CF4305;
+    border-radius: 20px 0 20px 0;
+    color: aliceblue;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    padding: 10px 18px;
+
+}
+
+.fnd-ui-Cardevent-info-container {
+    padding: 10px 10px 0px 10px;
+
+    h2 {
+        color: #007aa3;
+        font-size: 18px;
+        margin: 0;
+
+    }
+}
+
+
+.fnd-ui-Cardevent-title-info {
+    position: absolute;
+    right: 0px;
+    font-weight: bold;
+    font-size: 12px;
+    background-color: #CF4305;
+    color: aliceblue;
+    border-radius: 0 20px 0 20px;
+    padding: 10px 18px;
+}
+
+.fnd-ui-Cardevent-description {
+    font-style: italic;
+    margin: 5px 0;
+    text-align: justify;
+    font-size: 14px;
+}
+
+.fnd-ui-Cardevent-infoevent {
+    display: flex;
+    flex-direction: column;
+
+    div {
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+
+        span {
+            margin-right: 4px;
+        }
+
+        img {
+            width: 18px;
+            height: 18px;
+            margin: 4px 4px 4px 1px;
+        }
+    }
+
+    p {
+        text-align: justify;
+        font-weight: bold;
+        margin: 0px 0px;
+
+    }
+
+    a {
+        padding: 0 2px;
+        color: #007aa3;
+    }
+
+}
+
+.fnd-ui-Cardevent-buttons {
+    display: flex;
+
+    justify-content: space-between;
+    padding: 2px 10px 12px 10px;
+
+    div {
+        border-bottom: 2px solid #007aa3;
+        padding: 0 4px 6px 4px;
+
+        a {
+            font-size: 12px;
+            font-family: initial !important;
+            font-weight: bold;
+            text-decoration: none;
+            color: #007aa3;
+        }
+
+        button {
+            padding: 0;
+            font-weight: bold;
+            font-size: 12px;
+            border: none;
+            background: none;
+            color: #007aa3;
+
+        }
+    }
+}
+
+@include respond(sm) {
+    .fnd-ui-cardevent-container {
+        display: flex;
+
+    }
+
+    .fnd-ui-Cardevent-image-container {
+        border-radius: 20px 20px;
+        height: 100%;
+        width: 100%;
+
+    }
+
+    .fnd-ui-Cardevent-info-container {
+        h2 {
+            text-align: left;
+            padding: 8px 14px;
+            margin: 0 auto;
+        }
+    }
+
+    .fnd-ui-Cardevent-description {
+        padding: 0px 14px;
+    }
+
+    .fnd-ui-Cardevent-infoevent {
+        padding: 0px 10px;
+
+        div {
+            font-size: 14px;
+        }
+
+    }
+
+    .fnd-ui-Cardevent-buttons {
+        padding: 8px 14px 12px 6px;
+
+        div>a,
+        buttton {
+            font-size: 14px;
+        }
+
+    }
+
+}
+
+
+@include respond(md) {
+    .fnd-ui-Cardevent-info-container {
+        h2 {
+            font-size: 20px;
+        }
+    }
+
+    .fnd-ui-Cardevent-title-image,
+    .fnd-ui-Cardevent-title-info {
+        font-size: 14px;
+    }
+
+    .fnd-ui-Cardevent-description {
+        font-size: 16px;
+    }
+
+    .fnd-ui-Cardevent-infoevent {
+
+        div {
+            font-size: 18px;
+
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    .fnd-ui-Cardevent-buttons>div {
+        a {
+            font-size: 18px;
+        }
+
+        button {
+            font-size: 18px;
+        }
+    }
+
+}
+
+@include respond(lg) {
+    .fnd-ui-Cardevent-info-container {
+        margin: 30px 35px 0 35px;
+        padding: 0;
+
+        h2 {
+            padding: 0;
+            font-size: 25px;
+        }
+    }
+
+    .fnd-ui-Cardevent-title-image,
+    .fnd-ui-Cardevent-title-info {
+        font-size: 18px;
+    }
+
+    .fnd-ui-Cardevent-description {
+        padding: 0;
+        margin: 8px 0;
+        font-size: 18px;
+    }
+
+    .fnd-ui-Cardevent-infoevent {
+        padding: 0;
+
+        div>p,
+        a {
+            font-size: 21px;
+
+        }
+
+    }
+
+    .fnd-ui-Cardevent-buttons>div {
+        a {
+
+            padding-top: 13px;
+            font-size: 21px;
+        }
+
+        button {
+            font-size: 21px;
+        }
+    }
+
+}
+
+@include respond(xl) {
+    .fnd-ui-cardevent-container {
+        width: 80%;
+    }
+
+    .fnd-ui-Cardevent-info-container>h2 {
+        font-size: 28px;
+    }
+
+    .fnd-ui-Cardevent-description,
+    .fnd-ui-Cardevent-infoevent {
+        font-size: 20px;
+
+        div {
+            font-size: 20px;
+
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+    }
+
+    .fnd-ui-Cardevent-buttons>div {
+        padding-top: auto;
+
+        a,
+        button {
+            font-size: 24px;
+        }
+
+    }
+}
+
+@include respond(2xl) {
+    .fnd-ui-Cardevent-info-container>h2 {
+        font-size: 32px;
+    }
+
+    .fnd-ui-Cardevent-description,
+    .fnd-ui-Cardevent-infoevent {
+        font-size: 24px;
+
+        div {
+            font-size: 24px;
+
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+    }
+
+    .fnd-ui-Cardevent-buttons>div {
+        padding-top: 20px;
+
+        a,
+        button {
+            font-size: 28px;
+        }
+
+    }
+}
