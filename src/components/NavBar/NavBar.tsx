@@ -1,11 +1,9 @@
 /* eslint-disable react/no-children-prop */
 import React, { useState } from 'react'
 import { NavBarProps } from './NavBar.types'
-// import bars from '../../img/bars-solid.svg'
-// import xmark from '../../img/xmark-solid.svg'
 import DropDown from './DropDown'
-const bars = require('../../img/bars-solid.svg')
-const xmark = require('../../img/xmark-solid.svg')
+import bars from '../../img/bars-solid.svg'
+import xmark from '../../img/xmark-solid.svg'
 
 const NavBar: React.FC<NavBarProps> = ({ image, data }) => {
   const [menuOpen, setMenuopen] = useState(false)

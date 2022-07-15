@@ -1,14 +1,6 @@
+import { DropDowntypes } from './DropDown.types'
 
 export interface NavBarProps {
   image: string,
-  data: [
-    {
-      label: string,
-      link: string,
-      children: [{
-        label: string,
-        link: string,
-      }]
-    }
-  ]
+  data: Array<DropDowntypes>
 }

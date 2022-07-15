@@ -25,6 +25,7 @@
     "@babel/preset-react": "^7.17.12",
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-image": "^2.1.1",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.3.2",
     "@storybook/addon-actions": "^6.5.5",
@@ -49,6 +50,7 @@
     "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-storybook": "^0.5.12",
     "node-sass": "^7.0.1",
+    "npm": "^8.14.0",
     "postcss": "^8.4.14",
     "postcss-cli": "^9.1.0",
     "react": "^18.1.0",
@@ -56,7 +58,6 @@
     "rimraf": "^3.0.2",
     "rollup": "^2.74.1",
     "rollup-plugin-dts": "^4.2.2",
-    "rollup-plugin-image-files": "^1.4.2",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-svg-import": "^1.6.0",
@@ -69,8 +70,5 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   },
-  "types": "dist/index.d.ts",
-  "dependencies": {
-    "rollup-plugin-image-files2": "^1.4.6"
-  }
+  "types": "dist/index.d.ts"
 }
