@@ -1,6 +1,6 @@
 import React from 'react'
 import { ImageLinkProps } from './ImageLink.types'
-const imageSrc = require('../../img/image-link-arrow.svg')
+import imageSrc from '../../img/image-link-arrow.svg'
 
 const ImageLink: React.FC<ImageLinkProps> = ({ src, href, target = '_self', label }) => {
   return (

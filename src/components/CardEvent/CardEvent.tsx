@@ -1,10 +1,10 @@
 import React from 'react'
 import { CardEventProps } from './CardEvent.types'
 
-const addressed = require('../../../public/images/addressed-to-icon.svg')
-const allianceImg = require('../../../public/images/alliance-icon.svg')
-const calendar = require('../../../public/images/calendar-icon.svg')
-const locationImg = require('../../../public/images/location-icon.svg')
+import addressed from '../../../public/images/addressed-to-icon.svg'
+import allianceImg from '../../../public/images/alliance-icon.svg'
+import calendar from '../../../public/images/calendar-icon.svg'
+import locationImg from '../../../public/images/location-icon.svg'
 
 const CardEvent: React.FC<CardEventProps> = ({ title, cardTitle, titleImage, image, linkEvent, href, alt, target = '_blank', description, children, date, location, alliance, audience, onClick }) => {
   return (

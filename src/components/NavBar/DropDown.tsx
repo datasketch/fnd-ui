@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { DropDowntypes } from './DropDown.types'
-const arrow = require('../../img/arrow.png')
-// import arrow from
-// function DropDown ({ label, link, children }:DropDowntypes): JSX.Element {
+import arrow from '../../img/arrow.png'
+
 const DropDown: React.FC<DropDowntypes> = ({ label, link, children }) => {
   const [dropdownState, setDropdownState] = useState(false)
 
