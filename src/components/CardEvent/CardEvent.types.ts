@@ -1,19 +1,17 @@
-import React, { MouseEventHandler } from 'react'
+import { MouseEventHandler } from 'react'
 
 export interface CardEventProps {
   title: string,
-  cardTitle?: string,
-  image?: string,
-  titleImage?: string,
   description: string,
-  children?: React.ReactNode,
-  href: string,
-  alt?: string,
-  date?: string,
-  location?: string,
-  linkEvent?: string,
-  alliance?: string,
-  audience?: string,
-  target?: '_blank' | '_top' | '_parent' | '_self'
+  date: string,
+  site: string,
+  virtualLink?: string,
+  alliance: string,
+  addressedTo: string,
+  moreInformationLink: string,
+  srcImage?: string,
+  altImage?: string,
+  cardTitle: string,
+  target?: '_blank' | '_self' | '_parent' | '_top'
   onClick?: MouseEventHandler<HTMLButtonElement>,
 }

@@ -6,57 +6,132 @@ import allianceImg from '../../../public/images/alliance-icon.svg'
 import calendar from '../../../public/images/calendar-icon.svg'
 import locationImg from '../../../public/images/location-icon.svg'
 
-const CardEvent: React.FC<CardEventProps> = ({ title, cardTitle, titleImage, image, linkEvent, href, alt, target = '_blank', description, children, date, location, alliance, audience, onClick }) => {
+const CardEvent: React.FC<CardEventProps> = ({ title, description, date, site, virtualLink = '', alliance, addressedTo, moreInformationLink, srcImage = '', altImage = '', cardTitle = '', target = '_self', onClick }) => {
   return (
-    <div className={`fnd-ui-cardevent__container ${image ? 'fnd-ui-cardevent__container--big' : 'fnd-ui-cardevent__container--small'}`}>
-      {cardTitle && <div className='fnd-ui-cardevent__title-info'>{cardTitle}</div>}
-
-      {image && (<div className='fnd-ui-cardevent__image-parent'>
-        <div className='fnd-ui-cardevent__title-image'>{titleImage}</div>
-        <img className='fnd-ui-cardevent__image-container' src={image} alt={alt} />
-      </div>)}
-
-      <div className='fnd-ui-cardevent__info-container'>
-        {!image && <div style={{ padding: '15px' }}></div>}
-        <h2>{title}</h2>
-        <p className='fnd-ui-cardevent__description'>{description}</p>
-        <div className='fnd-ui-cardevent__infoevent'>
-          <div>
-            <img src={calendar} alt='calendar' />
-            <span>Fecha:</span>
-            {' '}
-            <p>{date}</p>
-          </div>
-          <div>
-            <img src={locationImg} alt='location' />
-            <span>Lugar: </span>
-            <p>{location}
+    srcImage
+      ? (
+        <div className='fnd-ui-cardevent__container fnd-ui-cardevent__container--big'>
+          <img className='fnd-ui-cardevent__image' src={srcImage} alt={altImage || ''} />
+          <div className='fnd-ui-cardevent__details'>
+            <h3 className='fnd-ui-cardevent__title'>
+              {title}
+            </h3>
+            <p className='fnd-ui-cardevent__description'>
+              {description}
             </p>
+            <div className='fnd-ui-cardevent__date'>
+              <img src={calendar} alt="calendar icon" />
+              <p>
+                Fecha: <b>{date}</b>
+              </p>
+            </div>
+            <div className='fnd-ui-cardevent__site'>
+              <img src={locationImg} alt="location icon" />
+              {
+                virtualLink
+                  ? (
+                    <p>
+                      Lugar: <b>Evento virtual (<a href={virtualLink} target="_blank" rel="noreferrer">Enlace aquí</a>)</b>
+                    </p>
+                    )
+                  : (
+                    <p>
+                      Lugar: <b>{site}</b>
+                    </p>
+                    )
+              }
+            </div>
+            <div className='fnd-ui-cardevent__alliance'>
+              <img src={allianceImg} alt="alliance icon" />
+              <p>
+                En alianza con: <b>{alliance}</b>
+              </p>
+            </div>
+            <div className='fnd-ui-cardevent__addressed-to'>
+              <img src={addressed} alt="addressed icon" />
+              <p>
+                Dirigido a: <b>{addressedTo}</b>
+              </p>
+            </div>
+            <div className='fnd-ui-cardevent--flex fnd-ui-cardevent--justify-between fnd-ui-cardevent--items-center'>
+              <a className='fnd-ui-cardevent__button' href={moreInformationLink} target={target}>
+                Más información
+              </a>
+              <button className='fnd-ui-cardevent__button' onClick={onClick}>
+                Agregar al calendario
+              </button>
+            </div>
+          </div>
+          {cardTitle &&
             (
-            {linkEvent && <a href={linkEvent} target={target} rel='noopener noreferrer'>Enlace aquí</a>}
+              <div className='fnd-ui-cardevent__card-title fnd-ui-cardevent__card-title--left'>
+                {cardTitle}
+              </div>
             )
-          </div>
-          <div>
-            <img src={allianceImg} alt='alliance' />
-            <span>En alianza con: </span>
-            <p>{alliance}</p>
-          </div>
-          <div>
-            <img src={addressed} alt='location' />
-            <span>Dirigido a: </span>
-            <p>{audience} </p>
-          </div>
+          }
         </div>
-        <div className='fnd-ui-cardevent__buttons'>
-          <div>
-            <a href={href} target='_blank' rel="noreferrer">Mas información</a>
+        )
+      : (
+        <div className='fnd-ui-cardevent__container fnd-ui-cardevent__container--small'>
+          <div className='fnd-ui-cardevent__details fnd-ui-cardevent__details--small'>
+            <h3 className='fnd-ui-cardevent__title'>
+              {title}
+            </h3>
+            <p className='fnd-ui-cardevent__description'>
+              {description}
+            </p>
+            <div className='fnd-ui-cardevent__date'>
+              <img src={calendar} alt="calendar icon" />
+              <p>
+                Fecha: <b>{date}</b>
+              </p>
+            </div>
+            <div className='fnd-ui-cardevent__site'>
+              <img src={locationImg} alt="location icon" />
+              {
+                virtualLink
+                  ? (
+                    <p>
+                      Lugar: <b>Evento virtual (<a href={virtualLink} target="_blank" rel="noreferrer">Enlace aquí</a>)</b>
+                    </p>
+                    )
+                  : (
+                    <p>
+                      Lugar: <b>{site}</b>
+                    </p>
+                    )
+              }
+            </div>
+            <div className='fnd-ui-cardevent__alliance'>
+              <img src={allianceImg} alt="alliance icon" />
+              <p>
+                En alianza con: <b>{alliance}</b>
+              </p>
+            </div>
+            <div className='fnd-ui-cardevent__addressed-to'>
+              <img src={addressed} alt="addressed icon" />
+              <p>
+                Dirigido a: <b>{addressedTo}</b>
+              </p>
+            </div>
+            <div className='fnd-ui-cardevent--flex fnd-ui-cardevent--justify-between fnd-ui-cardevent--items-center'>
+              <a className='fnd-ui-cardevent__button' href={moreInformationLink} target={target}>
+                Más información
+              </a>
+              <button className='fnd-ui-cardevent__button' onClick={onClick}>
+                Agregar al calendario
+              </button>
+            </div>
           </div>
-          <div>
-            <button onClick={onClick} >Agregar al calendario</button>
-          </div>
+          {cardTitle &&
+            (
+              <div className='fnd-ui-cardevent__card-title fnd-ui-cardevent__card-title--right'>
+                {cardTitle}
+              </div>
+            )
+          }
         </div>
-      </div>
-    </div>
+        )
   )
 }
 
